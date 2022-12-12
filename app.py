@@ -219,7 +219,7 @@ def app():
             oldest_book = session.query(Book).order_by(Book.published_date).first()
             newest_book = session.query(Book).order_by(Book.published_date.desc()).first()
             total_books = session.query(Book).count()
-            #python_books = session.query(Book).filter(Book.title.like('%Python%')).count
+            #python_books = session.query(Book).filter(Book.book_title.like('%Python%')).count()
             print(f'''\n**** BOOK ANALYSIS ****
                     \rOldest Book: {oldest_book.title}
                     \rNewsest Book: {newest_book.title}
